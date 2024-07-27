@@ -12,7 +12,7 @@
 #define LINE_COLOR_RESET     "\x1b[0m"
 
 FILE *file;
-const char HELP_TEXT[256] = "usage:\n  h-help,\n  q-quit,\n  r-random(usage: r-xy-numper of people in class, x-class number, y-class letter, example: r-2b-26 gets a random person from 2.b with 26 members),\n  n-no(useage: n-2b removes the last entery from 2b),\n", file_name[16] = "used_nums.txt", line_beginning[32] = "random_number_generator> ", ERROR1[8]="a";
+const char HELP_TEXT[256] = "usage:\n  h-help,\n  q-quit,\n  r-random(usage: r-xy-numper of people in class, x-class number, y-class letter, example: r-2b-26 gets a random person from 2.b with 26 members),\n  n-no(useage: n-2b removes the last entery from 2b),\n", file_name[16] = "USED_NUMS.txt", LINE_BEGINING[32] = "random_number_generator> ", ERROR1[8]="a";
 char input[8], file_line[8], class[16][32][8], chr[2], line[8], to_file[16], temp[8];
 int used_numbers[32], num_of_people, check_num, num_of_clas, refined, klas, class_num;
 
