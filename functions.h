@@ -73,7 +73,7 @@ int check_nums(){
 }
 
 void final_rand(int num_of_people){
-  while((check_num != 0)){
+  while((check_nums() != 0)){
     if(rn_unref < num_of_people)
       ++rn_unref;
     else
