@@ -19,6 +19,7 @@ Double click on the executable and a cmd will open
 ## Usage:
 when you launch the program you will first get a prompt:
 >random_number_generator>
+
 depending on the input the program will do diferent actions:
 ### h:
 help: prints a brief help text
