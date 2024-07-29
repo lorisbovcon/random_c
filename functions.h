@@ -8,7 +8,7 @@
 FILE *file;
 char input[8], file_line[8], class[16][32][8], chr[2], line[8], to_file[16], temp[8];
 const char FILE_NAME[16] = "USED_NUMS.txt", LINE_BEGINNING[32] = "random_number_generator> ";
-int headings[12] = { 0 }, used_numbers[32], num_of_people, check_num, num_of_clas, rn_unref = 0, refined, klas, class_num;
+int headings[12] = { 0 }, used_numbers[33], num_of_people, check_num, num_of_clas, rn_unref = 0, refined, klas, class_num;
 
 void check_file(){
   if(!(file = fopen(FILE_NAME, "r"))){
