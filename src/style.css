@@ -1,0 +1,52 @@
+body{
+  background-color: #FFCDB2;
+}
+.tb{
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+  font-size: 50px;
+  border: solid 3px rgba(0, 0, 0, 0);
+}
+.tb:hover{
+  opacity: 0.8;
+  border: rgba(0, 0, 0, 0.5) solid 3px;
+}
+.tb:active{
+  opacity: 0.5;
+  border: rgba(0, 0, 0, 1) solid 3px;
+}
+.tcell{
+  height: 100px;
+  width: 200px;
+}
+.in{
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 50px;
+  text-align: center;
+}
+#nw{
+  background-color: #00aa00;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 40px;
+}
+#rj{
+  background-color: #aa00aa;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 40px;
+}
+#cf{
+  background-color: #3333ff;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 40px;
+}
+#dl{
+  background-color: #aa0000;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+}

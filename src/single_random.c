@@ -17,9 +17,7 @@ char input[8], file_line[8], class[16][32][8], chr[2], line[8], to_file[16], tem
 int used_numbers[32], num_of_people, check_num, num_of_clas, refined, klas, class_num;
 
 int main(int argc, char* argv[]){
-  while(1){
-    printf(LINE_BEGINNING_COLOR "%s" LINE_COLOR_RESET, LINE_BEGINNING);
-    scanf("%s", &input);
+  strcpy(input, argv[1]);
       switch(input[0]){
         case 'q':
           return 0;
@@ -46,16 +44,18 @@ int main(int argc, char* argv[]){
             num_of_people = atoi(&input[5]);
           else
           num_of_people = atoi(&class[klas][0][4]);
-          if(atoi(&class[klas][num_of_people][0]) < num_of_people && atoi(&class[klas][num_of_people][0]) > 0){
+          if(atoi(&class[klas][num_of_people][0]) <= num_of_people && atoi(&class[klas][num_of_people][0]) > 0){
             int z;
             for(z = 0; z < 8; ++z)
-      	      temp[z] = class[klas][num_of_people +2][z];
+      	      temp[z] = class[klas][num_of_people + 1][z];
             int lokal_klas;
             int lokal_usr;
             for(lokal_klas = 2; lokal_klas < 32; ++lokal_klas)
               for(lokal_usr = 0; lokal_usr < 8; ++lokal_usr)
                 class[klas][lokal_klas][lokal_usr] = '\0';
-            sprintf(class[klas][1], "%d", rn_unref);
+            int hjkl;
+            for(hjkl = 0; hjkl < 8; ++hjkl)
+              class[0][2][hjkl] = temp[hjkl];
           }
           random_my_func(num_of_people);
           check_num = check_nums();
@@ -84,6 +84,5 @@ int main(int argc, char* argv[]){
           return -1;
           break;
       }
-  }
   return 0;
 }
