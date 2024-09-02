@@ -1,19 +1,8 @@
 # random_c
 a program for getting a random number.
 ## Installation:
-cloning the repo:
-```
-git clone https://github.com/lorisbovcon/random_c.git
-```
-compiling the program:
-```
-make all
-```
+just download the "multiRandom.exe" executable
 ## Running the program:
-Linux:
-```
-./random
-```
 Windows:
 Double click on the executable and a cmd will open
 ## Usage:
