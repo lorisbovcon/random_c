@@ -1,10 +1,3 @@
-#define LINE_BLACK           "\e[38;2;0;0;0m"
-#define LINE_BEGINNING_COLOR "\x1b[36m"
-#define LINE_STATUS          "\x1b[33m"
-#define LINE_TIPP            "\x1b[32m"
-#define LINE_ERROR           "\x1b[31m"
-#define LINE_COLOR_RESET     "\x1b[0m"
-
 FILE *file;
 char input[8], file_line[8], class[16][32][8], chr[2], line[8], to_file[16], temp[8];
 const char FILE_NAME[16] = "USED_NUMS.txt", LINE_BEGINNING[32] = "random_number_generator> ";
