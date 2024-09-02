@@ -2,14 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <windows.h>
 #include "functions.h"
-
-#define LINE_BLACK           "\e[38;2;0;0;0m"
-#define LINE_BEGINNING_COLOR "\x1b[36m"
-#define LINE_STATUS          "\x1b[33m"
-#define LINE_TIPP            "\x1b[32m"
-#define LINE_ERROR           "\x1b[31m"
-#define LINE_COLOR_RESET     "\x1b[0m"
 
 FILE *file;
 const char HELP_TEXT[256] = "usage:\n  h-help,\n  q-quit,\n  r-random(usage: r-xy-numper of people in class, x-class number, y-class letter, example: r-2b-26 gets a random person from 2.b with 26 members),\n  n-no(useage: n-2b removes the last entery from 2b),\n", file_name[16] = "USED_NUMS.txt", LINE_BEGINING[32] = "random_number_generator> ", ERROR1[8]="a";
@@ -17,8 +11,17 @@ char input[8], file_line[8], class[16][32][8], chr[2], line[8], to_file[16], tem
 int used_numbers[32], num_of_people, check_num, num_of_clas, refined, klas, class_num;
 
 int main(){
+  HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+  CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
+  WORD saved_attributes;
+
+  GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
+  saved_attributes = consoleInfo.wAttributes;
+
   while(1){
-    printf(LINE_BEGINNING_COLOR "%s" LINE_COLOR_RESET, LINE_BEGINNING);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
+    printf("%s", LINE_BEGINNING);
+    SetConsoleTextAttribute(hConsole, saved_attributes);
     scanf("%s", &input);
       switch(input[0]){
         case 'q':
@@ -71,7 +74,9 @@ int main(){
         	rm_last();
         	break;
         default:
-          printf(LINE_ERROR "%s" LINE_COLOR_RESET, ERROR1);
+          SetConsoleTextAttribute(hConsole, FOREGROUND_RED);
+          printf("%s", ERROR1);
+          SetConsoleTextAttribute(hConsole, saved_attributes);
           printf("%s", HELP_TEXT);
           return -1;
           break;
