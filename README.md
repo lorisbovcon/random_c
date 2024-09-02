@@ -14,8 +14,6 @@ Linux:
 ```
 ./random
 ```
-Windows:
-Double click on the executable and a cmd will open
 ## Usage:
 when you launch the program you will first get a prompt:
 >random_number_generator>
